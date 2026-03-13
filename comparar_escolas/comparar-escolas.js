@@ -62,8 +62,6 @@ function validarCampos(cidade, codigo, anoConstrucao, qtdeCursos){
 
 instanciarA.addEventListener("click", function() {
   if (validarCampos(cidadeA, codigoA, anoA, cursosA)) {
-    abrirEscola();
-    fecharEscola();
   } else {
     alert("Preencha todos os campos para a unidade A");
   }
@@ -75,6 +73,8 @@ const escolaA = new Senai (cidadeA.value, codigoA.value, anoA.value, cursosA.val
 
 /* ===== INSTANCIAR ESCOLA B ===== */
 const escolaB = new Senai (cidadeB.value, codigoB.value, anoB.value, cursosB.value);
+
+mensagemA .textContent = `A escola SENAI ${cidadeA.value} tem ${escolaA.idade} anos de funcionamento e oferece ${cursosA.value} cursos.`;
 
 /* ===== ABRIR ESCOLA ===== */
     abrirEscola() {
